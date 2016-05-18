@@ -76,8 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 $(".results-container").hide();
                 $(".search-result").hide();
                 $(".product-details").html("");
-                $(".product-details").append("<div class='images-container cf'>" + images + "</div><span class='brand-name'>" + data.brand.name + "</span>" +
-                    "<span class='product-name'>" + data.name + "</span>")
+                $(".product-details").append("<div class='images-container cf'>" + images + "</div>"+
+                    "<div class='info-wrapper'><span class='brand-name'>" + data.brand.name + "</span>" +
+                    "<span class='product-name'>" + data.name + "</span></div>" + 
+                    "<div class='price-wrapper'><span class='price-value'>" + data.units[0].price.formatted + "</span></div>")
 
                 $(".images-container").slick({
                     infinite: true,
