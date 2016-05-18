@@ -3,8 +3,7 @@
 
   "name": "ZLND",
   "description": "Zlnd search.",
-  "version": "1.0",
-  "options_page": "options.html",
+  "version": "1.0"
 
   "browser_action": {
    "default_icon": "img/icon.png",
@@ -13,9 +12,5 @@
   "permissions": [
    "activeTab",
     "storage"
-   ],
-     "content_scripts": [ {
-    "js": [ "lib/jquery.js", "js/popup.js" ],
-    "matches": [ "http://*/*", "https://*/*"]
-  }]
+   ]
 }

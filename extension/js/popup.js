@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         $("body").addClass("started");
         var term = $("#search-box").val();
+        $(".results-container").show();
         $(".search-result").show();
         $(".product-details").hide();
         var apiURL = "https://api.zalando.com/articles?fullText=" + term;
@@ -65,11 +66,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Accept-Language': 'de-DE',
             },
             success: function (data) {
+
+                var images = "";
+
+                data.media.images.forEach(function(image, index){
+                    images += "<div class='img-wrapper'><img src='" + image.mediumUrl + "'></div>"
+                });
                 console.log("Product details", data);
+                $(".results-container").hide();
                 $(".search-result").hide();
                 $(".product-details").html("");
-                $(".product-details").append("<span class='brand-name'>" + data.brand.name + "</span>" +
+                $(".product-details").append("<div class='images-container cf'>" + images + "</div><span class='brand-name'>" + data.brand.name + "</span>" +
                     "<span class='product-name'>" + data.name + "</span>")
+
+                $(".images-container").slick({
+                    infinite: true,
+                    arrows: false,
+                    speed: 150
+                });
             },
             error: function (data) {
                 console.log("ERR", data);

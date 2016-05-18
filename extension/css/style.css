@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    transition: all .5s linear;
+    //transition: all .5s linear;
 }
 body {
     width: 300px;
@@ -111,8 +111,7 @@ body.started .results-container {
     clear: both;
 }
 .search-result {
-    max-height: 500px;
-    max-height: 500px;
+    max-height: 495px;
     overflow-x: hidden;
     margin-top: 15px;
 }
@@ -183,3 +182,57 @@ body.started .back-1 {
 .back-2 {
     margin: 5px;
 }
+
+
+.images-container{
+    overflow: hidden;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+
+.images-container .img-wrapper{
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    outline: none;
+}
+
+.images-container img{
+    outline: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
