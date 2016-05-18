@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     $("#search-btn").click(function (e) {
         e.preventDefault();
-        
+
         $("body").addClass("started");
         var term = $("#search-box").val();
         $(".search-result").show();
-         $(".product-details").hide();
+        $(".product-details").hide();
         var apiURL = "https://api.zalando.com/articles?fullText=" + term;
 
         $.ajax({
@@ -22,19 +22,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('.ld-wrapper').hide();
             },
             success: function (data) {
-                
+
                 console.log("SUC", data.content);
                 $("#search-box").val("");
                 $(".search-result").html("")
-                
-                if(data.content.length > 0) {
+
+                if (data.content.length > 0) {
                     data.content.forEach(function (item, index) {
-                    $(".search-result").append("<li class=" + ((index % 2 == 0) ? 'first' : 'second') + " data-productId=" + item.id + "><img class='product-image' src=" + item.media.images[0].smallUrl + "><span class='brand-name'>" + item.brand.name + "</span> <span>" + item.name.substring(0,30) + "</span></li>");
-                });
+                        $(".search-result").append("<li class=" + ((index % 2 == 0) ? 'first' : 'second') + " data-productId=" +
+                            item.id + "><img class='product-image' src=" +
+                            item.media.images[0].smallUrl + "><span class='brand-name'>" +
+                            item.brand.name + "</span> <span>" + item.name.substring(0, 30) + "</span></li>");
+                    });
                 } else {
-                     $(".search-result").append("<div class='nothing-found'>Nothing found! :(</div>");
+                    $(".search-result").append("<div class='nothing-found'>Nothing found! :(</div>");
                 }
-                
+
 
             },
             error: function (data) {
@@ -65,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("Product details", data);
                 $(".search-result").hide();
                 $(".product-details").html("");
-                $(".product-details").append("<span class='brand-name'>" + data.brand.name + "</span>" + 
-                                             "<span class='product-name'>" + data.name + "</span>")
+                $(".product-details").append("<span class='brand-name'>" + data.brand.name + "</span>" +
+                    "<span class='product-name'>" + data.name + "</span>")
             },
             error: function (data) {
                 console.log("ERR", data);

@@ -9,44 +9,23 @@
 <body>
     <div class="back-1">
         <div class="back-2">
-    <div class="cf">
-        <input type="text" placeholder="Nike, Adidas, Lacoste ..." id="search-box">
-        <input type="button" value="Search" id="search-btn">
+            <div class="srch cf">
+                <input type="text" placeholder="Nike, Adidas, Lacoste ..." id="search-box">
+                <input type="button" value="Search" id="search-btn">
+            </div>
+
+            <div class="results-container">
+                <div class="ld-wrapper">
+                    <div id="loader"></div>
+                </div>
+                <div class="search-result cf">
+                </div>
+            </div>
+            <div class="product-details">
+
+            </div>
+        </div>
     </div>
-    
-    <div class="results-container">
-        <div class="ld-wrapper">
-            <div id="loader"></div>
-        </div>
-    <div class="search-result cf">
-        <!--
-        <li class="first" data-productid="VE121E0FL-Q11"><img class="product-image" src="https://i2.ztat.net/catalog/VE/12/1E/0F/LQ/11/VE121E0FL-Q11@1.1.jpg"><span class="brand-name">Vero Moda</span> <span>Bluse - black</span></li>
-        <li class="second" data-productid="TH342D002-A11"><img class="product-image" src="https://i4.ztat.net/catalog/TH/34/2D/00/2A/11/TH342D002-A11@13.jpg"><span class="brand-name">The North Face</span> <span>Poloshirt - white/metallic silver</span></li>
-        <li class="first" data-productid="ON321H05S-Q11"><img class="product-image" src="https://i4.ztat.net/catalog/ON/32/1H/05/SQ/11/ON321H05S-Q11@4.2.jpg"><span class="brand-name">ONLY</span> <span>Wollmantel / klassischer Mantel - black</span></li>
-        <li class="second" data-productid="VE121E0JF-A11"><img class="product-image" src="https://i3.ztat.net/catalog/VE/12/1E/0J/FA/11/VE121E0JF-A11@1.2.jpg"><span class="brand-name">Vero Moda</span> <span>Bluse - snow white</span></li>
-        <li class="first" data-productid="JA222D10M-K11"><img class="product-image" src="https://i2.ztat.net/catalog/JA/22/2D/10/MK/11/JA222D10M-K11@1.1.jpg"><span class="brand-name">Jack &amp; Jones</span> <span>Langarmshirt - navy blazer</span></li>
-        <li class="second" data-productid="S5321D00D-802"><img class="product-image" src="https://i2.ztat.net/catalog/S5/32/1D/00/D8/02/S5321D00D-802@1.jpg"><span class="brand-name">Schiesser Revival</span> <span>ELVIRA - Unterhemd / Shirt - schwarz</span></li>
-        <li class="first" data-productid="ON321I0N7-C11"><img class="product-image" src="https://i2.ztat.net/catalog/ON/32/1I/0N/7C/11/ON321I0N7-C11@4.2.jpg"><span class="brand-name">ONLY</span> <span>Strickpullover - dark grey</span></li>
-        <li class="second" data-productid="GU121C04F-K11"><img class="product-image" src="https://i1.ztat.net/catalog/GU/12/1C/04/FK/11/GU121C04F-K11@18.jpg"><span class="brand-name">Guess</span> <span>BRENDA - Jeanskleid - sunset</span></li>
-        <li class="first" data-productid="ON541E00F-Q11"><img class="product-image" src="https://i2.ztat.net/catalog/ON/54/1E/00/FQ/11/ON541E00F-Q11@4.jpg"><span class="brand-name">O'Neill</span> <span>HARMONY - Tights - black/blue</span></li>
-        <li class="second" data-productid="N1241N016-C11"><img class="product-image" src="https://i5.ztat.net/catalog/N1/24/1N/01/6C/11/N1241N016-C11@6.1.jpg"><span class="brand-name">Nike Performance</span> <span>Schweißband - dark grey/wolf grey/white</span></li>
-        <li class="first" data-productid="CF552D00K-O11"><img class="product-image" src="https://i3.ztat.net/catalog/CF/55/2D/00/KO/11/CF552D00K-O11@2.jpg"><span class="brand-name">CELIO</span> <span>DICUADRO - Gürtel - marron</span></li>
-        <li class="second" data-productid="DP521A03N-J11"><img class="product-image" src="https://i6.ztat.net/catalog/DP/52/1A/03/NJ/11/DP521A03N-J11@14.jpg"><span class="brand-name">Dorothy Perkins</span> <span>Stoffhose - pink</span></li>
-        <li class="first" data-productid="ON321D0V1-M11"><img class="product-image" src="https://i1.ztat.net/catalog/ON/32/1D/0V/1M/11/ON321D0V1-M11@4.jpg"><span class="brand-name">ONLY</span> <span>Bluse - kangaroo</span></li>
-        <li class="second" data-productid="ES121D0DG-A11"><img class="product-image" src="https://i6.ztat.net/catalog/ES/12/1D/0D/GA/11/ES121D0DG-A11@16.jpg"><span class="brand-name">Esprit</span> <span>Strickjacke - white</span></li>
-        <li class="first" data-productid="VE121C0Q4-K11"><img class="product-image" src="https://i1.ztat.net/catalog/VE/12/1C/0Q/4K/11/VE121C0Q4-K11@14.jpg"><span class="brand-name">Vero Moda</span> <span>VMFANNY - Freizeitkleid - total eclipse</span></li>
-        <li class="second" data-productid="ON321K04I-C11"><img class="product-image" src="https://i1.ztat.net/catalog/ON/32/1K/04/IC/11/ON321K04I-C11@4.1.jpg"><span class="brand-name">ONLY</span> <span>Blazer - simply taupe</span></li>
-        <li class="first" data-productid="ES421C05Z-802"><img class="product-image" src="https://i6.ztat.net/catalog/ES/42/1C/05/Z8/02/ES421C05Z-802@1.2.jpg"><span class="brand-name">Esprit Collection</span> <span>Etuikleid - black</span></li>
-        <li class="second" data-productid="YO152HA04-O11"><img class="product-image" src="https://i1.ztat.net/catalog/YO/15/2H/A0/4O/11/YO152HA04-O11@10.1.jpg"><span class="brand-name">YOUR TURN</span> <span>Umhängetasche - brown</span></li>
-        <li class="first" data-productid="EL051E05Z-F11"><img class="product-image" src="https://i1.ztat.net/catalog/EL/05/1E/05/ZF/11/EL051E05Z-F11@1.1.jpg"><span class="brand-name">Elli</span> <span>BELIEVE - Halskette - roségoldfarben</span></li>
-        <li class="second" data-productid="TA111B0P0-Q11"><img class="product-image" src="https://i1.ztat.net/catalog/TA/11/1B/0P/0Q/11/TA111B0P0-Q11@2.1.jpg"><span class="brand-name">Tamaris</span> <span>Pumps - black</span></li>-->
-    </div>
-        </div>
-    <div class="product-details">
-    
-    </div>
-        </div>
-        </div>
 </body>
 <script src="lib/jquery.js"></script>
 <script src="js/popup.js"></script>
